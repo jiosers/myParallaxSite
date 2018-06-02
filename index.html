@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100%;
+        }
+        .div-head{
+            height: 100vh;
+            width:100%;
+            background:url(images/img2.jpg) no-repeat fixed;
+            background-size: 100vw 100vh;
+        }
+        #inner-content{
+            color: white;
+            width: 40vw;
+            text-align: center;
+            margin: 0 auto 0 auto;
+            padding-top: 30vh;
+        }
+        .button-circle{
+            height: 80px;
+            width: 80px;
+            background-color: #DF372B;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(31,16,16,0.5), 0 0 15px rgba(31,16,16,0.2) inset;
+            cursor: pointer;
+            transition: all 0.5s;
+            display: inline-block;
+            line-height: 80px;
+        }
+        .button-circle:hover{
+            height:70px;
+            width: 70px;
+            line-height: 70px;
+
+        }
+        /*.div-content{*/
+            /*height: 108vh;*/
+        /*}*/
+        #div-nav{
+            height: 60px;
+            width: 100%;
+            background-color: #0C3B81;
+            z-index: 99;
+        }
+        .art-title{
+            position: relative;
+            width: 300px;height: 150px;
+            top: 0px;
+            /*width: 120px;height: 60px;*/
+            /*top: calc(60vh + 70px);*/
+
+
+        }
+        .nav-icon{
+            position: relative;
+            width: 120px;
+            height: 60px;
+        }
+        .table-cell-nav{
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            width: 16%;
+            height: 60px;
+            color: #E0DD91;
+            cursor: pointer;
+        }
+        .nav-text{
+            display: block;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            height: 100%;
+            font-size: 20px;
+            line-height: 58px;
+            color: #E0DD91;
+        }
+        .table-cell-nav:hover .nav-text{
+            border-bottom: 2px solid #E0DD91;
+        }
+        .chapter{
+            height: calc(100vh)
+        }
+
+        .showimg {
+            position: fixed;
+            top: -100%;
+            height: 100%;
+            overflow: hidden;
+            /*display: none;*/
+            transform:translate3d(0px, 0%, 0px)
+        }
+        .showimg-50 {
+            position: fixed;
+            top: -80%;
+            height: 80vh;
+            overflow: hidden;
+            /*display: none;*/
+            /*transform:translate3d(0px, 90%, 0px)*/
+        }
+        .myimg{
+            position: relative;
+        }
+        .myimg-50{
+            height: 100vh;
+            top: -20%;
+        }
+        .myimg-100{
+            height: 100vh;
+            top: 0%;
+        }
+        #chapter1-reserve{
+
+        }
+        #chapter1-reserve-50{
+            height: 80vh;
+        }
+        .chapter-view{
+            background-color: rgba(255,255,255,.7);
+            height: 500px;
+            width: 380px;
+            /*float: right;*/
+            display: inline-block;
+            text-align: left;
+            margin-right: 40px;
+            border-radius: 10px;
+            border: 2px solid #F0A145;
+            padding: 10px;
+        }
+        .chapter-content{
+            padding: 10px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+    </style>
+</head>
+<body id="body">
+
+<div class="showimg"
+     data-anchor-target="#chapter1-reserve"
+     data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+     data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+
+>
+    <img class="myimg myimg-100" src="images/chapter1.jpg" style="width: 100vw;height: 100vh;" alt=""
+         data-anchor-target="#chapter1-reserve"
+         data-bottom-top="transform:translate3d(0px, -80%, 0px)"
+         data-top-bottom="transform:translate3d(0px, 80%, 0px)"
+    >
+</div>
+
+<div class="showimg-50"
+     data-anchor-target="#chapter1-reserve-50"
+     data-bottom-top="transform:translate3d(0px, 225%, 0px)"
+     data-top-bottom="transform:translate3d(0px, 0%, 0px)"
+>
+    <img class="myimg myimg-50" src="images/chapter2.jpg" style="width: 100vw;height: 100vh;" alt=""
+         data-anchor-target="#chapter1-reserve-50"
+         data-bottom-top="transform:translate3d(0px, -60%, 0px)"
+         data-top-bottom="transform:translate3d(0px, 60%, 0px)"
+    >
+
+</div>
+
+    <!--监听导航锚点改变 背景图的 position-->
+        <div class="div-head"
+            data-anchor-target="#div-nav"
+            data-bottom-top="background-position:0vh 0vh"
+            data-top-top="background-position:0vh -50vh"
+        >
+
+            <div id="inner-content">
+                <!--我想要将艺术字 移动到 导航栏中间-->
+                <div style="width: 300px;height: 150px;text-align: center;margin: 0 auto">
+
+                    <!--data-anchor-target="#div-nav"-->
+                    <!--data-bottom-top="width: 300px;height: 150px;top: 0vh;"-->
+                    <!--data-top-top="width: 120px;height: 60px;top: 70vh;"-->
+
+                </div>
+
+                <div style="text-align: right;margin: 15px;font-size: 16px;color: #CBA733">
+                    --一部写给成年人的童话故事
+                </div>
+                <div class="" style="width: 100%;height: 100px;padding-top: 60px;text-align: center">
+                    <div class="button-circle">
+                        开始
+                    </div>
+                    <div style="margin-top: 10px">
+                        <img src="images/icon/down.png" width="40" height="35" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="div-content">
+            <!--这里到达底部子 div fixed 导致后边内容向上填充 这里父div固定高度-->
+            <div style="height: 60px">
+                <div class="" id="div-nav" style=""
+                     data-0="position:static;top:0px"
+                     data-top="position:fixed;top:0px"
+                >
+                    <div style="display: table;width: 80%;margin: 0 auto">
+                        <div class="table-cell-nav">
+                            <a  data-info="chapter1-reserve" class="nav-text">第一章</a>
+                        </div>
+
+                        <div class="table-cell-nav">
+                            <div style="height: 60px;text-align: center;margin: auto">
+                                <img class="nav-icon" src="images/arttitle.png"
+                                     data-0="width: 300px;height: 150px;top: -70vh;"
+                                     data-top="width: 120px;height: 60px;top: 0vh"
+                                >
+                            </div>
+
+                            <!--data-bottom-top="width: 300px;height: 150px;top: 0vh;"-->
+                            <!--data-top-top="width: 120px;height: 60px;top: 70vh;"-->
+                        </div>
+
+                        <div class="table-cell-nav">
+                            <a class="nav-text">第二章</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chapter" id="chapter1-reserve">
+            </div>
+            <div class="" style="position: relative;height: 0px;top: -80vh;z-index: 1;text-align: right">
+                <div class="chapter-view">
+                    <h3>
+                        chapter 1
+                    </h3>
+                    <div class="chapter-content">
+                        如果有人钟爱着一朵独一无二的盛开在浩瀚星海里的花。那么，当他抬头仰望繁星时，便会心满意足。他会告诉自己
+                        ：“我心爱的花在那里，在那颗遥远的星星上。”可是，如果羊把花吃掉了。那么，对他来说，所有的星光变会在
+                        刹那间暗淡无光！而你却认为这并不重要！
+                        <div style="text-align: right">
+                            ——《小王子》
+                        </div>
+                    </div>
+                    <div ></div>
+                </div>
+            </div>
+            <div class="chapter" id="chapter1-reserve-50">
+            </div>
+            <div style="height: 20vh;width: 100%">
+                <div style="border: 1px solid #0C3B81;background-color: rgba(12,59,129,.5);height: 100%;padding: 20px">
+                    <h3>chapter 2</h3>
+                    <div class="chapter-content">
+                        狐狸说：“我的生活很单调。我追逐鸡，人追逐我。所有的鸡都一个模样。所有的人也是。所以，我感到有点无聊。但是，如果你驯养了我，
+                        我的生活将充满阳光。我将辨别出一种与众不同的脚步声。别的脚步声会让我钻入地下。而你的脚步声却会像音乐一样，把我从洞穴里召唤出来。另外你瞧，
+                        看到那边的麦田了么？我不吃面包，小麦对我来说毫无用处。麦田也不会让我联想到任何事。这是很可悲的！但是你长着金黄色头发。当你驯养我以后，
+                        这将是非常美妙的一件事！麦子的颜色也是金黄色的，它会让我想起你。而且我也将喜欢聆听风儿吹过麦田的声音……
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <script type="text/javascript" src="js/skrollr.min.js"></script>
+    <script type="text/javascript">
+        skrollr.init({
+            forceHeight: false,
+            smoothScrolling: false,
+            mobileDeceleration: 0.004
+        });
+//        var tm=null
+//        function newsScroll() {
+//            var scrollimg=document.getElementById("body")
+//            if(scrollimg.parentNode.scrollTop!=(scrollimg.clientHeight/2))
+//                scrollimg.parentNode.scrollTop+=5;
+//            else
+//                scrollimg.parentNode.scrollTop=0
+//        }
+////        window.onload=function() {
+////            tm=setInterval('newsScroll()',25)
+////        }
+//        function stop()
+//        {
+//            clearInterval(tm)
+//        }
+//        function start()
+//        {
+//            tm=setInterval('newsScroll()',15)
+//        }
+    </script>
+</body>
+</html>
