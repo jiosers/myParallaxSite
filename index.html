@@ -192,7 +192,7 @@
                     --一部写给成年人的童话故事
                 </div>
                 <div class="" style="width: 100%;height: 100px;padding-top: 60px;text-align: center">
-                    <div class="button-circle">
+                    <div class="button-circle" onclick="scrollScream(1)">
                         开始
                     </div>
                     <div style="margin-top: 10px">
@@ -209,11 +209,11 @@
                      data-top="position:fixed;top:0px"
                 >
                     <div style="display: table;width: 80%;margin: 0 auto">
-                        <div class="table-cell-nav">
+                        <div class="table-cell-nav" onclick="scrollScream(1)">
                             <a  data-info="chapter1-reserve" class="nav-text">第一章</a>
                         </div>
 
-                        <div class="table-cell-nav">
+                        <div class="table-cell-nav"   onclick="scrollScream(0)">
                             <div style="height: 60px;text-align: center;margin: auto">
                                 <img class="nav-icon" src="http://qiniu.kajie88.com/arttitle.png"
                                      data-0="width: 300px;height: 150px;top: -70vh;"
@@ -225,7 +225,7 @@
                             <!--data-top-top="width: 120px;height: 60px;top: 70vh;"-->
                         </div>
 
-                        <div class="table-cell-nav">
+                        <div class="table-cell-nav"  onclick="scrollScream(2)">
                             <a class="nav-text">第二章</a>
                         </div>
                     </div>
@@ -274,6 +274,12 @@
             smoothScrolling: false,
             mobileDeceleration: 0.004
         });
+
+        function scrollScream(mul) {
+            var hight =  document.documentElement.clientHeight
+//            alert(hight*2);
+            skrollr.get().animateTo(hight*(mul==null?1:mul));
+        }
 //        var tm=null
 //        function newsScroll() {
 //            var scrollimg=document.getElementById("body")
