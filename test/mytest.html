@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: calc(100vh + 1000px);
+        }
+    </style>
+</head>
+<body>
+<div class="div-main">
+    <div style="height: 500px;border: 1px solid #ff3333;font-size: 50px">
+
+    </div>
+    <!--data-500表示 滚动500px之后的样式-->
+    <!--data-0   滚动0时的样式-->
+    <!--data-500 滚动500时的样式 -->
+    <!--data-top div滚动到顶端时的样式-->
+<!--
+    绝对模式（或文件模式）
+    关键帧被定义为描述文档向下滚动的绝对值。
+
+    语法是data-[offset]-[anchor]，其中offset可以是任何整数（默认为0），anchor可以是start（默认）或end。无论是offset或anchor可以在某些情况下可以省略。以下是关键帧及其含义的一些示例。
+
+    data-0= data-start= data-0-start：当滚动顶部为0时。
+    data-100= data-100-start：当滚动顶部是100时。
+    data&#45;&#45;100= data&#45;&#45;100-start：当滚动顶部为-100时（听起来像无稽之谈，但请记住，插值将与此点相关）。
+    data-end= data-0-end：偏移量为0时，但是从文档底部开始而不是从顶部开始计算。简而言之：当你到达页面底部时。
+    data-100-end：我们到达底部之前100px。
+    data&#45;&#45;100-end：到达底部后100px（再次，这取决于你是否需要它）。
+    相对模式（或视口模式）
+    我们可以根据任何元素相对于视口的位置来定义它们，而不是定义与文档相关的关键帧（即绝对）。
+
+    语法是data-[offset]-(viewport-anchor)-[element-anchor]，在这里offset再次可以是任意整数，缺省值为0两者viewport-anchor（强制）和element-anchor（可选）可以是一个top，center或bottom。如果element-anchor省略，viewport-anchor则会取值（与背景位置一样）。以下是关键帧及其含义的一些示例。
+
+    data-top= data-0-top= data-top-top= data-0-top-top：当元素的顶部与视口的顶部对齐时。
+    data-100-top= data-100-top-top：当元素的顶部高于视口顶部100px时。
+    data&#45;&#45;100-top= data&#45;&#45;100-top-top：当元素的顶部低于视口顶部100px时。
+    data-top-bottom= data-0-top-bottom：当元素的底部位于视口的顶部时（它不可见）。
+    data-center-center= data-0-center-center：元素位于视口的中心时。
+    data-bottom-center= data-0-bottom-center：当元素的中心位于视口的底部时，元素的上半部分可见。
+
+    -->
+
+    <div data-0="background-color:rgb(0,0,255);font-size: 12px" data-500="background-color:rgb(255,0,0);font-size: 50px">WOOOT1</div>
+    <div data-0="background-color:rgb(0,0,255);transform[bounce]:rotate(0deg);" data-500="background-color:rgb(255,0,0);transform[bounce]:rotate(360deg);">WOOOT2</div>
+    <div data-0="background-color:rgb(0,0,255);transform[bounce]:rotate(0deg);" data-top="background-color:rgb(255,0,0);transform[bounce]:rotate(360deg);">WOOOT3</div>
+
+</div>
+
+
+<script type="text/javascript" src="../js/skrollr.min.js"></script>
+<script type="text/javascript">
+    var s = skrollr.init({
+//        forceHeight: false,  //填充滚动
+        easing: {
+            bounce: function(p) {
+                return p;
+            }
+        },
+        smoothScrolling:true,
+
+    });
+</script>
+</body>
+</body>
+</html>
