@@ -6,7 +6,7 @@
 作者github https://github.com/Prinzhorn/skrollr
 
 ## 在线Demo
-http://www.kajie88.com/myparallaxsite/
+http://parallaxdemo.kajie88.com/
 
 ##### 还有部分功能没有实现 继续研究
 加油！！！💪
