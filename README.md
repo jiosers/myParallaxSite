@@ -17,8 +17,10 @@ http://parallaxdemo.kajie88.com/
 # 前言
 最近使用滚动视差建设广告页面成为了潮流。那么也让我紧跟这潮流fashion一下吧😄。
 简单的放一下我的Demo和Github
-Demo地址：http://www.kajie88.com/myparallaxsite
+Demo地址：http://parallaxdemo.kajie88.com/
+
 github地址：https://github.com/kajiecy/myParallaxSite
+
 skrollr.js作者的GitHub: https://github.com/Prinzhorn/skrollr
 # 正文
 废话不多说 直接切入正题吧，本片随笔使用skrollr.js来实现视差滚动。在决定选择使用它之前我也进行大量筛选与学习。最终根据文档的详细程度，语法的难易度等的对比选择使用skrollr.js了。
